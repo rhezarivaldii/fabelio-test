@@ -1,0 +1,138 @@
+<div
+  class="page-header page-header-xs"
+  style="background-color: #fff;"
+></div>
+<div class="wrapper">
+  <div class="main">
+    <div class="section">
+      <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-12">
+                    <div class="card  no-transition">
+                        <div class="container padding-job">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <h5 class="title" style="font-weight: bold">
+                                  Trajektori Harga
+                              </h5>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                                <div *ngIf="chart">
+                                  <canvas id="canvas">{{ chart }}</canvas>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                    <div class="card  no-transition">
+                        <div class="container padding-job">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <h5 class="title" style="font-weight: bold">
+                                  Comments
+                              </h5>
+                              <div class="row">
+                                <div class="col-12">
+                                  <textarea [(ngModel)]="comment" class="form-control" cols="30" rows="10"></textarea>
+                                </div>
+                                <div class="col-12" style="padding-top: 20px;">
+                                  <button (click)="submitComment()" style="float: right;" class="btn btn-primary">Submit</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row" *ngFor="let comment of product.comments" style="background-color: #FAFAFA; margin-top: 30px; border-radius: 10px;">
+                            <div class="col-md-12" style="padding: 20px 20px 0 20px">
+                              <div class="row">
+                                <div class="col-6">
+                                    <p>Anonymous said:</p>
+                                </div>
+                                <div class="col-6">
+                                  <p style="float: right;">{{comment.createdAt | date: 'short'}}</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-12" style="padding: 10px 20px 10px 20px;border-bottom: 1px solid white">
+                              <div class="row">
+                                <div class="col-12">
+                                  <p>{{ comment.comment }}</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-12" style="padding: 10px 20px 10px 20px;">
+                              <div class="row justify-content-md-end">
+                                <div class="col-md-4">
+                                  <div (click)="downVote(comment)" style="float:right; cursor: pointer; display: inline-block; padding-left: 20px">
+                                      <i  class="material-icons">sentiment_very_dissatisfied</i> <span style="padding-bottom: 5px">{{ comment.votes.voteDown}}</span>
+                                  </div>
+                                  <div (click)="upVote(comment)" style="float:right; cursor: pointer; display: inline-block">
+                                      <i class="material-icons">
+                                          sentiment_very_satisfied</i> <span style="padding-bottom: 5px">{{ comment.votes.voteUp}}</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card  no-transition">
+                    <div class="container padding-job">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h4 class="title" style="font-weight: bold">
+                              {{product.productName}}
+                          </h4>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                            <ngx-gallery style="width: 100%" [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h4 style="float:right; padding: 0.5rem 18px">{{ product.prices[0].productPrice}}</h4>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h5 style="" class="title">Description</h5>
+                          <div>
+                            <p style="font-size: 15px;">{{product.productDesc}}</p>
+                            <!-- <p style="font-size: 13px;">{{ jobVacancy.description }}</p> -->
+                          </div>
+                          <br />
+                          <!-- <h3 class="title" style="text-decoration: underline;">Requirements</h3> -->
+                          <div>
+                            <p style="font-size: 15px;" id="requirement"></p>
+                            <!-- <p style="font-size: 13px;">{{ jobVacancy.requirement }}</p> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

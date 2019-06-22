@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "username": "root",
+        "password": "rhereza123",
+        "database": "fabelio",
+        "host": "localhost",
+        "dialect": "mysql",
+        "port": 3306
+    }
+}

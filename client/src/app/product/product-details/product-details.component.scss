@@ -1,0 +1,220 @@
+.padding-50 {
+    padding: 50px;
+}
+
+
+.card-10-margin {
+    margin-top: 10px !important;
+}
+
+.container-inside {
+    position: absolute;
+    right: 15%;
+    left: 15%;
+    top: 45%;
+    // bottom: 50px;
+    z-index: 10;
+    color: #fff;
+    width: 35%;
+}
+
+.title {
+    color: rgb(237, 6, 119);
+    font-weight: bold;
+    // font-family: 'bariol-bold';
+}
+
+.subtitle {
+    color: #fff;
+    font-weight: bolder;
+}
+
+.clean-bg {
+    background-image: url('/assets/img/jeremy-bishop-334996-unsplash.jpg');
+}
+
+.card-img {
+    width: 200px;
+}
+
+.card-img-why {
+    width: 110px;
+    padding-bottom: 12px;
+}
+
+.pink-bg {
+    background-color: rgb(237, 6, 119);
+}
+
+.img-limited {
+    width: 96%;
+    border-radius: 2px;
+}
+
+.section-primary {
+    background-color: rgb(237, 6, 119) !important;
+    color: #fff;
+}
+
+.brand {
+    width: 50%;
+}
+
+// h5.title {
+//     color: #fff;
+// }
+h2.title.title-hiring {
+    color: #fff;
+}
+
+h2.title-white {
+    color: #fff;
+}
+
+.title-accent {
+    font-weight: bold;
+    color: #FFDB08;
+}
+
+.footer-logo {
+    padding-top: 100px;
+}
+
+.image-container {
+    background-size: cover;
+}
+
+.btn-anteraja {
+    background-color: rgb(237, 6, 119);
+    border-width: 2px;
+    border-color: rgb(237, 6, 119);
+    font-size: 0.8em;
+    width: 120px;
+    color: #fff;
+}
+
+.btn-anteraja-accent {
+    background-color: #FFDB08;
+    border-width: 2px;
+    border-color: #FFDB08;
+    font-size: 0.8em;
+    width: 150px;
+}
+
+.btn-anteraja:hover {
+    background-color: rgba(237, 6, 119, 0.8);
+    color: rgb(237, 6, 119);
+    border-color: rgba(237, 6, 119, 0.8);
+}
+
+.btn-anteraja-alt {
+    border-width: 2px;
+    background-color: white;
+    color: rgb(237, 6, 119);
+    border-color: rgb(237, 6, 119);
+    width: 150px;
+}
+
+.btn-anteraja-noborder {
+    border: 2px;
+    border-color: white;
+    background-color: white;
+    color: rgb(237, 6, 119);
+    padding-left: 0 !important;
+}
+
+.btn-anteraja-alt:hover {
+    background-color: rgb(237, 6, 119);
+    color: #fff;
+}
+
+.card-category {
+    color: rgb(237, 6, 119);
+}
+
+.description {
+    width: 150px;
+    color: #fff;
+}
+
+.padding-top-80 {
+    padding-top: 80px;
+}
+
+.padding-bottom-80 {
+    padding-bottom: 80px;
+}
+
+.fit-content {
+    height: fit-content !important;
+}
+
+h4.title-white {
+    color: white;
+    font-weight: bold;
+}
+
+p {
+    color: #577083 !important;
+}
+
+p.text-white {
+    color: white !important;
+}
+
+.text-bolder {
+    font-weight: bold;
+}
+
+.padding-30 {
+    padding: 30px;
+}
+
+.card-title-text {
+    font-weight: bold;
+}
+
+.card-title {
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.jobs {
+    height: 150px;
+    overflow: hidden;
+    // white-space: nowrap; 
+    // text-overflow: ellipsis;
+}
+
+.card-description-text {
+    text-overflow: ellipsis;
+    // white-space: nowrap;
+}
+
+.content-left {
+    border-right: 1px solid #F1EAE0;
+}
+
+p {
+    font-size: 15px;
+}
+
+#requirement li {
+    font-size: 15px !important;
+}
+
+.padding-job {
+    padding: 0 40px 40px 40px;
+}
+
+@media screen and (max-width:500px) {
+    .content-left {
+        border: 0;
+    }
+
+    .padding-job {
+        padding: 0 10px 10px 10px;
+    }
+}
+
+

@@ -1,0 +1,63 @@
+<div class="wrapper">
+  <div
+    class="page-header page-header-xs"
+    data-parallax="true"
+    style="background-color: #fff"
+  >
+  </div>
+  <div class="main">
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><h2 class="title">List of Products</h2></div>
+        </div>
+        <div class="row" *ngIf="productList.length > 0">
+          <div class="col-md-4" *ngFor="let data of productList; let v=index;" data-aos="zoom-in-down" data-aos-delay="400">
+            <div class="card">
+              <div class="card-block padding-30">
+                <div class="card-title">
+                  <h4 class="card-title-text">{{data.productName}}</h4>
+                  <p class="card-title-subtitle" style="font-size: 11px;">
+                      {{ 'SYNCH' | translate }}
+                    <span style="color: rgb(237, 6, 119);"
+                      >{{data.lastSynchronized | date: 'shortTime'}}</span
+                    >
+                  </p>
+                </div>
+                <div class="card-description jobs">
+                  <img [src]="data.productImg" style="width: 90%; padding-bottom: 40px;" alt="">
+                  <p class="card-description-text" style="font-size: 14px;">
+                    {{data.productDesc}}
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <hr />
+                  <div class="row">
+                    <div class="col-md-6">
+                      <a
+                        (click)="goToDetails(v)"
+                        class="btn btn-round btn-anteraja-noborder"
+                        style="color: rgb(237, 6, 119);"
+                        >{{ 'PRODUCT_DETAILS' | translate }}</a
+                      >
+                    </div>
+                    <div class="col-md-6">
+                      <p style="float:right; padding: 0.5rem 18px">{{ data.latestProductPrice}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" *ngIf="productList.length == 0">
+          <h5>Uh oh! Looks like you have not added any product</h5>
+        </div>
+        <!-- Temporary, needs to be deleted -->
+        <div class="row" style="height: 20px;">
+          <div class="col-md-12"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

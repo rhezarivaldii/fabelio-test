@@ -1,0 +1,72 @@
+<div class="wrapper">
+  <div
+    id="home"
+    class="page-header page-header-xs"
+    style="background-color: white;"
+  >
+  </div>
+
+  <div class="main">
+    <div class="section section-primary" id="register">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="text-center">
+                <h3 class="master-title-accent">{{'REGISTER' | translate }}</h3>
+                <div class="row justify-content-center">
+                  <div class="col-1">
+                      <hr class="master-accent"/>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <div class="card card-profile" data-aos="zoom-in-up" data-aos-delay="300">
+              <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                  <div class="envelope-container ml-auto mr-auto">
+                    <img style="width: 100%;" src="assets/img/fabelio_white_lamp.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                  <h3 class="card-category">Link Product</h3>
+                </div>
+                <div class="col-md-8 text-center">
+                  <p class="card-category">{{'SUBSCRIBE' | translate}}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="container-custom-input">
+                    <div class="col-12">
+                      <div class="container__item">
+                        <form action="form">
+                            <button type="button" class="btn btn--primary btn--inside uppercase hide-button">Register</button>
+                          </form>
+                      </div>
+
+                    </div>
+                </div>
+              </div>
+              <div class="row justify-content-center career-row">
+                <div class="container-custom-input">
+                  <div class="col-12">
+                      <div class="container__item">
+                          <form class="form">
+                            <input style="width: 80%" [(ngModel)]="fabelioUrl" type="url" class="form__field" placeholder="Masukkan url product Fabelio" [ngModelOptions]="{standalone: true}"/>
+                            <button (click)="addProduct()" type="button" class="btn btn--primary btn--inside uppercase">Register</button>
+                          </form>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

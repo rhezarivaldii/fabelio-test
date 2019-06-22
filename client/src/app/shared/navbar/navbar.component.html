@@ -1,0 +1,38 @@
+<nav class="navbar fill navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="100">
+    <div class="container">
+        <div class="navbar-translate">
+            <div class="logo-container">
+                <a (click)="emitNav('home')" [routerLink]="['/']"><img style="width: 75px; height: 75px" class="brand" src="assets/img/logo.png" alt=""></a>
+            </div>
+            <button style="padding-right:20px; padding-top: 17px;" class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto mr-auto">
+                <li class="nav-item" (click)="emitNav('product-list')">
+                    <a [ngClass]="{'landing-text': isLanding(), 'about-text': isAbout()}" class="nav-not nav-link" rel="tooltip" title="Want to know about us?" data-placement="bottom">
+                        <h5 class="">{{ 'NAVBAR_LIST_PRODUCT' | translate }}</h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                        <div ngbDropdown class="dropdown" placement="bottom-left">
+                                <a [ngClass]="{'landing-text': isLanding(), 'about-text': isAbout()}" class="nav-link language" id="dropdownBasic1" ngbDropdownToggle style="cursor: pointer;">{{'NAVBAR_LANGUAGE' | translate}}</a>
+                                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-danger dropdown-menu-right">
+                                        <a (click)="setActiveLanguage('in')" class="dropdown-item" >Bahasa Indonesia</a>
+                                        <a (click)="setActiveLanguage('en')" class="dropdown-item" >English</a>
+                                    </div>
+                                </div>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="#" class="btn btn-round btn-anteraja">Download</a>
+                </li> -->
+                <!-- <li class="nav-item">
+                    <a href="#" class="btn btn-round btn-anteraja-alt">Jadi Mitra</a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</nav>

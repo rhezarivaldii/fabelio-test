@@ -1,0 +1,266 @@
+.padding-0 {
+    padding: 0;
+    // padding: 0 0 80px 0!important;
+}
+
+.parallax {
+    min-height: 84vh !important;
+}
+
+.heading {
+    padding-top: 60px;
+    margin-bottom: 80px;
+}
+
+.title-brand {
+    // margin-bottom: 150px;
+}
+
+.master-title {
+    color: rgb(114, 44, 145);
+}
+
+hr.master {
+    border-color: rgb(114, 44, 145);
+    border-width: 2px;
+    border-radius: 2px;
+}
+
+.master-title-accent {
+    color: white;
+}
+
+hr.master-accent {
+    border-color: white;
+    border-width: 2px;
+    border-radius: 2px;
+}
+
+.card-container {
+    padding: 30px 15px;
+    min-height: 220px;
+}
+
+.author {
+    min-height: 50px;
+}
+
+.card-profile {
+   margin-top: 20px !important;
+}
+
+.btn-transparent-container {
+    padding-top: 30px;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+
+    .btn-transparent {
+        color: rgb(114, 44, 145);
+        padding-top: 50px;
+    }
+    
+    .btn-transparent:hover {
+        color: rgb(79, 8, 109);
+    }
+}
+
+.envelope-container {
+    width: 150px;
+    padding: 50px 0 30px 0;
+}
+
+.input-container {
+    width:100%;
+}
+
+.career-row {
+    padding: 0 0 30px 0;
+}
+
+.subscribe-input {
+    width: 100%;
+}
+
+// Input
+
+.container-custom-input {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.hide-button {
+    visibility: hidden;
+}
+
+//** button
+.btn {
+	display: inline-block;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	transition: all 200ms ease-in;
+	cursor: pointer;
+	
+	&--primary {
+		background: rgb(114, 44, 145);
+		color: white;
+		box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+		border-radius: 2px;
+		padding: 12px 36px;
+		
+		&:hover {
+			background: darken(rgb(114, 44, 145), 4%);
+		}
+		
+		&:active {
+			background: rgb(114, 44, 145);
+			box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+		}
+	}
+	
+	&--inside {
+		margin-left: -96px;
+    }
+    
+    @media screen and (max-width:768px) {
+        &--inside {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+}
+
+//** form
+.form {	
+	&__field {
+		width: 360px;
+		background: #fff;
+		color: rgb(77, 74, 71);
+		font: inherit;
+		box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+		border: 0;
+		outline: 0;
+        padding: 22px 18px;
+        width: 40%;
+        margin: 0 10px 0 0;
+    }
+
+    &__field::placeholder {
+        font-size: 0.8rem;
+    }
+
+    @media screen and (max-width:768px) {
+        &__field {
+            width: 80%;
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+.card-img-why {
+    width: 80px;
+    padding-bottom: 12px;
+}
+
+.title-pink {
+    color: rgb(114, 44, 145);
+    font-weight: bold;
+}
+
+.img-about-us-container {
+    width: 50%;
+    margin:auto;
+}
+
+.vision-mission {
+    margin-top: 0 !important;
+    margin-bottom: 30px;
+}
+
+.flex-ctrl {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row-mission {
+    padding-top: 100px;
+}
+
+.description {
+    padding-top: 30px;
+    width: 100%;
+}
+
+.col-1 {
+    min-width: 60px;
+}
+
+
+// Mobile
+
+@media screen and (max-width:766px) {
+    .flex-ctrl {
+        align-items: center;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .padding-20 {
+        padding-top: 30px;
+    }
+
+    .row-mission {
+        padding-top: 50px;
+    }
+
+    .hide-button {
+        height: 0px !important;
+        margin: 0;
+    }
+}
+
+.img-container-grid {
+    width: 100%;
+    padding: 2em 2em 2em 0;
+    background: rgba(255,255,255, 0.4);
+
+    .img-container-2 {
+        margin-left: 2em;
+        // margin-right: -1em;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.img-container-grid-2 {
+    width: 100%;
+    padding: 2em 0;
+    background: rgba(255,255,255, 0.4) url() 50%/cover;
+
+    .img-container-2-2 {
+        margin-left: -1em;
+        margin-right: 2em;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+
