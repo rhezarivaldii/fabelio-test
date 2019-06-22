@@ -11,12 +11,12 @@ Register the product we want to monitor by copying the url from Fabelio's websit
 
 ## Environment
 
-Node.js
-Express.js
-Sequelize (ORM)
-MySQL
-Uzmug (Database Migration helper)
-Angular
+- Node.js
+- Express.js
+- Sequelize (ORM)
+- MySQL
+- Uzmug (Database Migration helper)
+- Angular
 
 ## List of Exposed APIs
 |        ENDPOINT        |HTTP METHOD                          |DESC                         |
@@ -32,9 +32,16 @@ Angular
 ## SETUP
 
 **Server Side**
+
 First we need to install the dependencies using npm, cd to the root folder and type:
 
 > $ npm install
+
+Create a database in MySQL with the default name **fabelio**, if you want to change them, do so in /server/config/db_config.json
+
+Migrate the database schema using node:
+
+> $ node migration.js
 
 Then, we need to start the Node Server. Simply type:
 > $ node app.js
@@ -43,6 +50,7 @@ The default server is running on port 3000
 
 
 **Client Side**
+
 Install the Angular-CLI:
 
 
