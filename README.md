@@ -65,6 +65,9 @@ The default server is running on port 4200
 
 ## Deployment
 
+Client side code is deployed to Firebase Hosting.
+
+Server side is deployed by creating a virtual machine in Google Cloud Platform, installing Node and npm, using forever to run the project, and use Nginx as a gateway reverse proxy. All server side related configuration is handled by Nginx
 
 ## Author
 
