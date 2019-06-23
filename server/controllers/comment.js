@@ -27,8 +27,6 @@ let commentController = {
                         res.status(500).json(result);
                     }
                 })
-
-                // res.status(201).json(responseDto(true, result, "Comment has been submitted"));
             })
 
         })
@@ -49,13 +47,9 @@ let commentController = {
             res.status(500).json(responseDto(false, null, error))
         });
     },
-    // updateComment: (req, res, next) => {
-        
-    // }
 }
 
 let getCommentByProduct = (req, res, next) => {
-    console.log("Inside get comment by product");
         Comment.findAll({
             where: {
                 ProductId: req.body.ProductId

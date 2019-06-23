@@ -1,18 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatNativeDateModule, MatStepperModule, MatIconModule, MatCardModule, MatDividerModule, MatExpansionModule, MatInputModule, MatSelectModule, MatButtonModule, MatButtonToggleModule, MatSnackBarModule } from "@angular/material";
 import { AppComponent } from './app.component';
 
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 import { UrlServices } from './services/url-services';
 import { ProductService } from './product/product.service';
-import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './services/data-service';
 import { TranslateService } from './services/translate-service';
 import { TranslatePipe } from './shared/pipe/translate-pipe';

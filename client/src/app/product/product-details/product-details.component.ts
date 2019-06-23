@@ -10,6 +10,7 @@ import {
   NgxGalleryAnimation
 } from "ngx-gallery";
 import { ProductService } from "../product.service";
+import { MatSnackBar } from "@angular/material";
 
 @Component({
   selector: "app-product-details",
@@ -20,8 +21,8 @@ export class ProductDetailsComponent implements OnInit {
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[] = [];
 
-  private comment: String = "";
-  private chart = [];
+  public comment: String = "";
+  public chart = [];
   public product: ProductDetails;
   public id: any;
   public jobVacancy = {
@@ -39,7 +40,8 @@ export class ProductDetailsComponent implements OnInit {
     public dataService: DataService,
     public router: Router,
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private snackbar: MatSnackBar
   ) {}
 
   ngOnInit() {
@@ -53,8 +55,8 @@ export class ProductDetailsComponent implements OnInit {
         this.product.productName = result.productName;
         this.product.productDesc = result.productDesc;
         this.product.productUrl = result.productUrl;
-        this.product.prices = result.prices;
-        this.product.comments = result.comments;
+        this.product.prices = this.sortTime(result.prices);
+        this.product.comments = this.sortTime(result.comments);
 
         let images: Array<Object> = new Array<Object>();
         JSON.parse(result.productImg).forEach(img => {
@@ -73,6 +75,20 @@ export class ProductDetailsComponent implements OnInit {
     );
   }
 
+  private sortTime(obj) {
+    return obj.sort((n1, n2) => {
+      if (n1.createdAt > n2.createdAt) {
+        return -1;
+    }
+
+    if (n1.createdAt < n2.createdAt) {
+        return 1;
+    }
+
+    return 0;
+    })
+  }
+
   public submitComment() {
     let req = {
       ProductId: this.id,
@@ -81,12 +97,14 @@ export class ProductDetailsComponent implements OnInit {
 
     this.productService.submitComment(req).subscribe(
       result => {
+        this.openSnackBar("Comment has been submitted!", "close");
         this.comment = "";
-        this.product.comments = result;
+        this.product.comments = this.sortTime(result);
         console.log(result);
       },
       err => {
         console.log(err);
+        this.openSnackBar(err, "close");
       }
     );
   }
@@ -159,7 +177,7 @@ export class ProductDetailsComponent implements OnInit {
     let time = [];
     let price = [];
 
-    prices.reverse();
+    // prices.reverse();
 
     prices.forEach(objPrice => {
       time.push(moment(objPrice.createdAt).format("LT"));
@@ -200,6 +218,14 @@ export class ProductDetailsComponent implements OnInit {
           ]
         }
       }
+    });
+  }
+
+  private openSnackBar(message: string, action: string) {
+    this.snackbar.open(message, action, {
+      duration: 5000,
+      horizontalPosition: "center",
+      verticalPosition: "bottom"
     });
   }
 }

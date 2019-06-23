@@ -23,7 +23,7 @@ let productController = {
       ]
     })
       .then(products => {
-        console.log(JSON.stringify(products));
+        // console.log(JSON.stringify(products));
         res
           .status(200)
           .json(responseDto(true, products, "Success fetching all products"));
@@ -58,7 +58,7 @@ let productController = {
       ]
     })
       .then(product => {
-        console.log(product);
+        // console.log(product);
         if (product == null) {
           res
             .status(404)
@@ -130,12 +130,12 @@ let productController = {
       .then(async products => {
         await products.forEach(async product => {
           let updatedProductPrice = await fetchUpdatedPrice(product.productUrl);
-          console.log(
-            "updated price for product " +
-              product.productName +
-              " is " +
-              updatedProductPrice
-          );
+          // console.log(
+          //   "updated price for product " +
+          //     product.productName +
+          //     " is " +
+          //     updatedProductPrice
+          // );
 
           let body = {
             productPrice: updatedProductPrice,
@@ -150,11 +150,9 @@ let productController = {
           });
         });
         console.log("Data has been updated");
-        // res.status(200).json(responseDto(true, {}, "Data has been updated"));
       })
       .catch(error => {
         console.log(error);
-        // res.status(400).json(responseDto(false, null, error));
       });
   }
 };

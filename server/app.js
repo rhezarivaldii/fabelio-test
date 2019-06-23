@@ -25,8 +25,6 @@ app.use('/vote', voteRouter);
 
 // Set listening port
 
-
-
 app.listen(3000, () => {
     console.log('Fabelio server is running on port 3000');
 });

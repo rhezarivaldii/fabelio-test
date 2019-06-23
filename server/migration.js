@@ -10,14 +10,7 @@ let sequelize = null;
 if (config.use_env_variable) {
     sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
-    sequelize = new Sequelize(config.database, config.username, config.password, {
-        database: 'fabelio',
-        username: 'root',
-        password: 'rhereza123',
-        dialect: 'mysql',
-        host: 'localhost',
-        port: 3306
-    });
+    sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
 const umzug = new Umzug({

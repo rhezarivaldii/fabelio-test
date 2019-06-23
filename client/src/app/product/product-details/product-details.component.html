@@ -91,7 +91,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" *ngIf="product.productName">
                 <div class="card  no-transition">
                     <div class="container padding-job">
                       <div class="row">
@@ -108,7 +108,7 @@
                       </div>
                       <div class="row">
                         <div class="col-md-12">
-                          <h4 style="float:right; padding: 0.5rem 18px">{{ product.prices[0].productPrice}}</h4>
+                          <h4 style="float:right; padding: 0.5rem 18px">{{ product.prices[0]['productPrice']}}</h4>
                         </div>
                       </div>
                       <div class="row">
@@ -116,13 +116,10 @@
                           <h5 style="" class="title">Description</h5>
                           <div>
                             <p style="font-size: 15px;">{{product.productDesc}}</p>
-                            <!-- <p style="font-size: 13px;">{{ jobVacancy.description }}</p> -->
                           </div>
                           <br />
-                          <!-- <h3 class="title" style="text-decoration: underline;">Requirements</h3> -->
                           <div>
                             <p style="font-size: 15px;" id="requirement"></p>
-                            <!-- <p style="font-size: 13px;">{{ jobVacancy.requirement }}</p> -->
                           </div>
                         </div>
                       </div>
